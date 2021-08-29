@@ -1,0 +1,7 @@
+README.txt
+setup.py
+PrometheusGardenMetricsExporter.egg-info/PKG-INFO
+PrometheusGardenMetricsExporter.egg-info/SOURCES.txt
+PrometheusGardenMetricsExporter.egg-info/dependency_links.txt
+PrometheusGardenMetricsExporter.egg-info/requires.txt
+PrometheusGardenMetricsExporter.egg-info/top_level.txt
