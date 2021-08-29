@@ -32,6 +32,15 @@ Todo this, I plan to use a:
 ## Server (Raspberry Pi 4)
 The server will have a custom python 3 service installed and Systemd service that will act a [prometheus](https://prometheus.io/) exporter. hosted on 8000
 
+## Setup
+
+### Development
+
+#### Promethus Node Compile
+```
+python3 setup.py install
+```
+
 
 ## Document Version
    DELTA 0.0.1
