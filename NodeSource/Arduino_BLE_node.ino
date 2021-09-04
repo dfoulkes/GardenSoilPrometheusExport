@@ -11,7 +11,6 @@ BLEUnsignedIntCharacteristic moistureCharacteristic("2A6F", BLERead | BLENotify)
 
 void read_temphum() {
  mositure = analogRead(A0);
- Serial.print("Moisture Sensor Value:"+mositure);
 }
 
 void setup() {
@@ -22,7 +21,7 @@ void setup() {
 
   // BLE error catching
   if (!BLE.begin()){
-    Serial.println("BLE failed to initiate");
+    // Serial.println("BLE failed to initiate");
     while(1);
   }
   BLE.setLocalName("arduinoTsensor");
@@ -32,8 +31,6 @@ void setup() {
   moistureCharacteristic.writeValue(mositure);
   BLE.advertise();
   Serial.println("Bluetooth device now active, waiting for connect...");
-
-
 }
 
 void loop() {
@@ -47,14 +44,11 @@ void loop() {
       delay(1000);
       read_temphum();
       moistureCharacteristic.writeValue(mositure);
-      Serial.print("At main function");
-      Serial.println(mositure);
     }
 
     digitalWrite(LED_BUILTIN,LOW);
     Serial.print("Disconnected from central: ");
     Serial.println(central.address());
-
   }
 
 }
