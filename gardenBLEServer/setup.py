@@ -9,7 +9,7 @@ DESCRIPTION = 'gather metrics from garden Arduino soil moisture nodes and expose
 URL = 'https://github.com/dfoulkes/GardenSoilPrometheusExport'
 EMAIL = 'danfoulkes@gmail.com'
 AUTHOR = 'Dan Foulkes'
-REQUIRES_PYTHON = '>=3.6.0'
+REQUIRES_PYTHON = '>=3.7.0'
 VERSION = '0.1.0'
 
 REQUIRED = [
