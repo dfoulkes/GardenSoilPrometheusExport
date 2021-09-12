@@ -1,5 +1,6 @@
 - name: install garden node
-  hosts: all 
+  hosts: gardenServer
   roles:
     - role: baseline
+    - role: garden-server
     

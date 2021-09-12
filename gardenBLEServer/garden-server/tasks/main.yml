@@ -1,0 +1,24 @@
+---
+# tasks file for garden-server
+- name: setup python runtime
+  ansible.builtin.file:
+    path: /opt/src/ble-server
+    state: directory
+    mode: u=rw,g=r,o=r
+  become: yes  
+
+- name: copy source into source directory
+  ansible.builtin.copy:
+    src: ./prometheus.py
+    dest:  /opt/src/ble-server/prometheus.py
+  become: yes  
+
+- name: copy source into source directory
+  ansible.builtin.copy:
+    src: ./setup.py
+    dest:  /opt/src/ble-server/setup.py 
+  become: yes  
+
+- name: run setup.py
+  command: python3 /opt/src/ble-server/setup.py install
+  become: yes              
