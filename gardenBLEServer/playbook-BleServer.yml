@@ -1,0 +1,5 @@
+- name: install garden node
+  hosts: all 
+  roles:
+    - role: baseline
+    
