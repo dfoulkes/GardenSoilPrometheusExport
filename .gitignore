@@ -138,4 +138,4 @@ dmypy.json
 cython_debug/
 
 #Ansible Inventory File
-./gardenBLEServer/inventory.yml
+gardenBLEServer/inventory.yml
