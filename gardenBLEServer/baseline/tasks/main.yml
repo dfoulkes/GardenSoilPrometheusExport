@@ -13,6 +13,7 @@
       - build-essential
       - libssl-dev
       - python3-pip
+      - libglib2.0-dev
     state: latest
     update_cache: yes  
   become: yes
