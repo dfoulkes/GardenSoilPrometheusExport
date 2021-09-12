@@ -1,0 +1,10 @@
+---
+# tasks file for baseline
+
+- name: install requirements for bluetooth headers
+  apt:
+    name:
+      - libbluetooth-dev
+    state: latest  
+  become: yes
+
