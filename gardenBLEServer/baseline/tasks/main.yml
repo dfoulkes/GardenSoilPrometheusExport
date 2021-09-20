@@ -1,9 +1,9 @@
 ---
 # tasks file for baseline
 
-- name: Upgrade all apt packages
-  apt: upgrade=dist force_apt_get=yes
-  become: yes
+# - name: Upgrade all apt packages
+#   apt: upgrade=dist force_apt_get=yes
+#   become: yes
 
 - name: install requirements for bluetooth headers and python depenencies
   apt:
@@ -11,10 +11,13 @@
       - python3
       - libbluetooth-dev
       - build-essential
-      - libssl-dev
+      - libglib2.0-dev
       - python3-pip
       - libglib2.0-dev
       - glib2-devel
+      - libboost-all-dev
+      - libboost-python1.62-dev
+      
     state: latest
     update_cache: yes  
   become: yes
